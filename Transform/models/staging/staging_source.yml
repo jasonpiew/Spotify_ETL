@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw_spotify
+    schema: public
+    database: spotify_project_v2
+    tables:
+      - name: spotify_project
+
+# this is where we maintain and refer the source:
+# my source is taken from spotify api that has been moved into a database itself
+#

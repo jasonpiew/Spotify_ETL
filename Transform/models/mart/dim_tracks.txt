@@ -1,0 +1,14 @@
+{# with filter_column_and_create_unique_key_tracks as(
+select
+distinct track_url as track_url,
+track_name as track_name,
+rank()over(order by track_url) as track_id--unique key
+from {{ source('staging_spotify', 'stg_spotify_project') }}
+)
+
+,final as (
+    select * from filter_column_and_create_unique_key_tracks
+)
+select * from final #}
+
+-not needed at the moments

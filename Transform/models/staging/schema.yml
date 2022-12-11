@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: base_spotify_project
+    description: "contains user lists"
+    # schema : staging
+    columns:
+      - name: uniq_key
+        description: "The primary key for this table"
+        tests:
+          - unique

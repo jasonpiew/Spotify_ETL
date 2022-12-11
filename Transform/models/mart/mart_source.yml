@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: staging_spotify
+    schema: staging
+    database: spotify_project_v2
+    tables:
+      - name: stg_spotify_project
+
+#dengan menambahkan informasi below, bisa melakukan staging source dari destinasi schema staging
+  # - name: raw_spotify_staging
+  #   schema: staging
+  #   database: spotify_project_v2
+  #   tables:
+  #     - name: base_spotify_project      
