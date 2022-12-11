@@ -1,0 +1,14 @@
+{# 
+    we will reference year
+    from dim_date
+ #}
+with date_table as(
+    select distinct extract(week from date_of_the_day) as week
+     from {{ ref('dim_date') }}
+)
+,final as(
+    select week,
+    row_number()over() as week_id
+    from date_table
+)
+select * from final

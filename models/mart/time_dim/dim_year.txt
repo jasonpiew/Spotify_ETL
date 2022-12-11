@@ -1,0 +1,14 @@
+{# 
+    we will reference year
+    from dim_date
+ #}
+with date_table as(
+    select distinct extract(year from date_of_the_day) as year
+     from {{ ref('dim_date') }}
+)
+,final as(
+    select year,
+    row_number()over() as year_id from date_table
+)
+
+select * from final

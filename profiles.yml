@@ -1,0 +1,27 @@
+spotify_project_v2:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: jason
+      password: jason
+      port: 2700
+      dbname: spotify_project_v2
+      schema: public
+    to_stage:
+      type: postgres
+      host: localhost
+      user: jason
+      password: jason
+      port: 2700
+      dbname: spotify_project_v2
+      schema: staging
+    to_mart:
+      type: postgres
+      host: localhost
+      user: jason
+      password: jason
+      port: 2700
+      dbname: spotify_project_v2
+      schema: mart

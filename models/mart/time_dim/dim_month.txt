@@ -1,0 +1,20 @@
+{# 
+    we will reference year
+    from dim_date
+ #}
+with date_table as(
+    select distinct extract(month from date_of_the_day) as month
+     from {{ ref('dim_date') }}
+)
+,final as(
+    select month,
+    row_number()over() as month_id
+    from date_table
+)
+select * from final
+
+{# 
+    untuk membuat dim month, dim quarter, dan dim year
+    bisa me-reference time of the day dari dim_date,
+    tapi untuk skrg di-disable dulu, cukup pakai dim_date for all
+ #}
