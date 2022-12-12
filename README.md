@@ -14,12 +14,10 @@ There will be some step that we will undergo such as:
 2. Docker (to host PostgresQL server and Metabase)
 3. Dbeaver (I use this as a database IDE)
 4. dbt (I use dbt CLI)
-5. Metabase
 
 ### Folder Organization:
 1. Python > stores the script to read data and send it into our database
 2. Transform > stores the structure of dbt
-3. Visualization > stores the query used for Metabase, since I host the Metabase on local, I can't share it.
 
 #### Note
 Please do remember you will need to host your Docker, and the code is not for practical solution. But to give you a glimpse of how this project works. Feel free to contact me on LinkedIn if you'd like to discuss : https://www.linkedin.com/in/jason-piew/! see ya there
